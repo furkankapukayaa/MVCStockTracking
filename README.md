@@ -1,4 +1,4 @@
-# Katmanlı Mimari Ders Kayıt Projesi
+# MVC Stok Takip Projesi
         
 Bu Proje <strong>Murat Yücedağ</strong>'ın <strong><a href="https://www.youtube.com/playlist?list=PLKnjBHu2xXNNRPqfdZC6hNmJKOqIIpqNj" target="_blank">50 Derste MVC</a></strong> dersinden esinlenerek yapılmıştır.<br>
 Proje MVC olarak tasarlanmıştır.<br>
