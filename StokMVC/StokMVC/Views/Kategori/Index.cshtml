@@ -1,0 +1,47 @@
+﻿@using StokMVC.Models.Entity
+@model List<TBLKATEGORILER>
+
+@*@using PagedList
+@using PagedList.Mvc*@
+
+@*@model PagedList.IPagedList<TBLKATEGORILER>*@
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+<table id="tblkategori" class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Kategori Id</th>
+            <th>Kategori Adı</th>
+            <th>Güncelle</th>
+            <th>Sil</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var ktgr in Model)
+        {
+            <tr>
+                <td>@ktgr.KATEGORIID</td>
+                <td>@ktgr.KATEGORIAD</td>
+                <td> <a href="/Kategori/KategoriGetir/@ktgr.KATEGORIID" class="btn btn-success">Güncelle</a> </td>
+                <td> <a href="/Kategori/Sil/@ktgr.KATEGORIID" class="btn btn-danger">Sil</a> </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+@*@Html.PagedListPager((IPagedList)Model, sayfa => Url.Action("Index", new { sayfa }))*@
+
+<link href="~/Content/DataTables/css/dataTables.bootstrap4.css" rel="stylesheet" />
+<script src="https://cdn.datatables.net/1.10.15/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/1.10.15/js/dataTables.bootstrap4.min.js "></script>
+
+<script>
+    $('#tblkategori').dataTable({});
+</script>
+<br />
+<a href="/Kategori/YeniKategori" class="btn btn-primary">Yeni Kategori Ekle</a>
+

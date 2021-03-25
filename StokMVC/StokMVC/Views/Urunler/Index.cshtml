@@ -1,0 +1,49 @@
+﻿@using StokMVC.Models.Entity;
+@model List<TBLURUNLER>
+
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+<table id="tblurun" class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Ürün Id</th>
+            <th>Ürün Adı</th>
+            <th>Marka</th>
+            <th>Ürün Kategori</th>
+            <th>Fiyat</th>
+            <th>Stok</th>
+            <th>Güncelle</th>
+            <th>Sil</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var urn in Model)
+        {
+            <tr>
+                <td>@urn.URUNID</td>
+                <td>@urn.URUNAD</td>
+                <td>@urn.MARKA</td>
+                <td>@urn.TBLKATEGORILER.KATEGORIAD</td>
+                <td>@urn.FIYAT</td>
+                <td>@urn.STOK</td>
+                <td> <a href="/Urunler/UrunGetir/@urn.URUNID" class="btn btn-success">Güncelle</a> </td>
+                <td> <a href="/Urunler/Sil/@urn.URUNID" class="btn btn-danger">Sil</a> </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<link href="~/Content/DataTables/css/dataTables.bootstrap4.css" rel="stylesheet" />
+<script src="https://cdn.datatables.net/1.10.15/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/1.10.15/js/dataTables.bootstrap4.min.js "></script>
+
+<script>
+    $('#tblurun').dataTable({});
+</script>
+<br />
+<a href="/Urunler/YeniUrun" class="btn btn-primary">Yeni Ürün Ekle</a>
+

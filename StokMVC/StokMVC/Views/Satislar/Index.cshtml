@@ -1,0 +1,46 @@
+﻿@model  StokMVC.Models.Entity.TBLSATISLAR
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+<div class="text-center">
+    <img src="~/images/satis.png" class="container-fluid"/>
+    <br />
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#Modal1" style="margin-top:10px; width:300px; height:100px;">Satış Ekle</button>
+</div>
+
+<div class="modal" id="Modal1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title">Satış İşlemleri</h2>
+            </div>
+            <form method="post" action="/Satislar/YeniSatis">
+                <div class="modal-body">
+                    <label>Ürün Adı</label>
+                    @*<input type="text" name="urun" class="form-control" />*@
+                    @Html.TextBoxFor(m => m.URUN, new { @class = "form-control" })
+                    @*@Html.DropDownListFor(m => m.TBLURUNLER.URUNID, (List<SelectListItem>)ViewBag.dgr, new { @class = "form-control" })*@
+                    <br />
+                    <label>Müşteri Adı</label>
+                    @*<input type="text" name="musteriadi" class="form-control" />*@
+                    @Html.TextBoxFor(m => m.MUSTERI, new { @class = "form-control" })
+                    @*@Html.DropDownListFor(m => m.TBLMUSTERILER.MUSTERIID, (List<SelectListItem>)ViewBag.dgr2, new { @class = "form-control" })*@
+                    <br />
+                    <label>Adet</label>
+                    @*<input type="text" name="adet" class="form-control" />*@
+                    @Html.TextBoxFor(m => m.ADET, new { @class = "form-control" })
+                    <br />
+                    <label>Fiyat</label>
+                    @*<input type="text" name="fiyat" class="form-control" />*@
+                    @Html.TextBoxFor(m => m.FIYAT, new { @class = "form-control" })
+                    <br />
+                    <button type="submit" class="btn btn-success">Satış Yap</button>
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Vazgeç</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

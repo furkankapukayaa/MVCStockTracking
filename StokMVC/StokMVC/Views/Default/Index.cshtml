@@ -1,0 +1,46 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+<h2>Stok Kontrol Yardım Merkezi</h2>
+<br />
+<p>
+    Bu proje <strong>Murat Yücedağ</strong>'ın <strong><a href="https://www.youtube.com/playlist?list=PLKnjBHu2xXNNRPqfdZC6hNmJKOqIIpqNj" target="_blank">50 Derste MVC</a></strong> dersinden esinlenerek yapılmıştır.
+    <br />
+    Aşağıdaki tabloda ise yapılan sistem kısaca anlatılmıştır.
+</p>
+<div id="accordion">
+    <div class="card">
+        <div class="card-header">
+            <a class="card-link" data-toggle="collapse" href="#collapseOne">
+                Tanıtım
+            </a>
+        </div>
+        <div id="collapseOne" class="collapse show" data-parent="#accordion">
+            <div class="card-body">
+                <ul>
+                    <li>Proje MVC olarak tasarlanmıştır.</li>
+                    <li>Projede Asp.NET,HTML,CSS,JS,Boostrap kullanılmıştır.</li>
+                    <li>Microsoft SQL Server bağlantılıdır.</li>
+                </ul>
+                <div class=" bildirim alert alert-danger" style="display:inline-block;">
+                    <strong>Dikkat!</strong> Projede kullanılan isimler herhangi bir gerçeklik ifade etmemektedir.
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-header">
+            <a class="collapsed card-link" data-toggle="collapse" href="#collapseTwo">
+                Proje Kaynak Kodları
+            </a>
+        </div>
+        <div id="collapseTwo" class="collapse" data-parent="#accordion">
+            <div class="card-body">
+                Projenin kaynak kodlarını <a href="https://github.com/furkankapukayaa" target="_blank">github.com/furkankapukayaa</a> adresinden bulabilirsiniz.
+            </div>
+        </div>
+    </div>
+</div>

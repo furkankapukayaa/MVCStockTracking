@@ -1,0 +1,50 @@
+﻿@using StokMVC.Models.Entity;
+@model List<TBLMUSTERILER>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+@*@using (Html.BeginForm("Index", "Musteri", FormMethod.Get))
+{
+    <p>Ara @Html.TextBox("p") </p>
+    <input type="submit" value="Ara" />
+}*@
+
+
+<table id="tblmusteri" class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Müşteri Id</th>
+            <th>Müşteri Adı</th>
+            <th>Müşteri Soyadı</th>
+            <th>Güncelle</th>
+            <th>Sil</th>
+            <th>Sil (Alert)</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var mstr in Model)
+        {
+            <tr>
+                <td>@mstr.MUSTERIID</td>
+                <td>@mstr.MUSTERIAD</td>
+                <td>@mstr.MUSTERISOYAD</td>
+                <td> <a href="/Musteriler/MusteriGetir/@mstr.MUSTERIID" class="btn btn-success">Güncelle</a> </td>
+                <td> <a href="/Musteriler/Sil/@mstr.MUSTERIID" class="btn btn-danger">Sil</a> </td>
+                <td>@Html.ActionLink("Sil2", "Sil", new { id = mstr.MUSTERIID }, new { @class = "btn btn-warning", onclick = "return confirm('Gerçekten Silmek İstiyor Musunuz!')" }) </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<link href="~/Content/DataTables/css/dataTables.bootstrap4.css" rel="stylesheet" />
+<script src="https://cdn.datatables.net/1.10.15/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/1.10.15/js/dataTables.bootstrap4.min.js "></script>
+
+<script>
+    $('#tblmusteri').dataTable({});
+</script>
+<br />
+<a href="/Musteriler/YeniMusteri" class="btn btn-primary">Yeni Müşteri Ekle</a>
