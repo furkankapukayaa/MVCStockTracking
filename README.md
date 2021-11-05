@@ -1,7 +1,6 @@
-# MVC Stok Takip Projesi
-        
-Bu Proje <strong>Murat Yücedağ</strong>'ın <strong><a href="https://www.youtube.com/playlist?list=PLKnjBHu2xXNNRPqfdZC6hNmJKOqIIpqNj" target="_blank">50 Derste MVC</a></strong> dersinden esinlenerek yapılmıştır.<br>
-Proje MVC olarak tasarlanmıştır.<br>
-Projede Asp.NET,HTML,CSS,JS,Boostrap kullanılmıştır.<br>
-Microsoft SQL Server bağlantılıdır.<br>
-<a href="https://github.com/furkankapukayaa/mvc-stok-takip/blob/main/dbStokMVC.sql">SQL kodları için tıklayınız.</a>
+# MVC Stock Tracking Project
+This Project was inspired by Murat Yücedağ's 50 Lessons MVC course.<br>
+<a href="https://www.youtube.com/playlist?list=PLKnjBHu2xXNNRPqfdZC6hNmJKOqIIpqNj" target="_blank">Lesson Link</a><br>
+Asp.NET, HTML, CSS, JS, Bootstrap were used in the project.<br>
+It is connected to Microsoft SQL Server.<br>
+<a href="https://github.com/furkankapukayaa/MVCStockTracking/blob/main/dbStokMVC.sql">Click for SQL codes.</a>
